@@ -16,18 +16,21 @@ public class GameManager : MonoBehaviour
     public void PlayerScore()
     {
         _playerScore++;
-
         this.playerScoreText.text = _playerScore.ToString();
-        this.ball.ResetPosition();
-        this.ball.AddStartingForce();
+        ResetRound();
     }
     public void ComputerScore()
     {
         _computerScore++;
-
         this.computerScoreText.text = _computerScore.ToString();
+        ResetRound();
+        
+    }
+    private void ResetRound()
+    {
+        this.playerPaddle.ResetPosition();
+        this.computerPaddle.ResetPosition();
         this.ball.ResetPosition();
         this.ball.AddStartingForce();
     }
-
 }
