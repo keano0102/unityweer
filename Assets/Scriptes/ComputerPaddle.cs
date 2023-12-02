@@ -26,7 +26,7 @@ public class ComputerPaddle : Paddle
             }
             else if (this.transform.position.y < 0.0f)
             {
-                _rigidbody.AddForce(Vector2.up * this.speed);
+                _rigidbody.AddForce(Vector2.up);
             }
         }
 
